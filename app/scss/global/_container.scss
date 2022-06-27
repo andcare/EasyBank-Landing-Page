@@ -1,0 +1,39 @@
+@use '../variable/' as *;
+
+
+// Container
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &-pd-x {
+        padding-inline: 1.375rem;
+    }
+    &-pd-y {
+        padding-block: 1.125rem;
+    }
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Button Container
+.button {
+    padding: 1.0625rem 2.1875rem;
+    border-radius: 1.5625rem;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    color: $white;
+}

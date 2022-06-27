@@ -1,0 +1,24 @@
+// Mobile : 480px down
+// Tablets/iPads : 481px - *768px*
+// Laptops : 769px - *1024px*
+// Desktops: 1025px - 1200px and more
+
+$breakpoints-down: (
+    'mobile': '30em'
+);
+
+$breakpoints-up: (
+    'mobile': '30.0625em'
+);
+
+@mixin breakpoint-down($screen) {
+    @media screen and (max-width: map-get($breakpoints-down, $screen)) {
+        @content;
+    };
+}
+
+@mixin breakpoint-up ($screen) {
+    @media screen and (min-width: map-get($breakpoints-up, $screen)) {
+        @content;
+    };
+};
