@@ -32,8 +32,16 @@
 
 // Button Container
 .button {
+    display: block;
     padding: 1.0625rem 2.1875rem;
     border-radius: 1.5625rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
+    font-size: $smallFont;
+    font-weight: $regularWeight;
     color: $white;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
 }
