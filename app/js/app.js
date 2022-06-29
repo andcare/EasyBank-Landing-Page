@@ -6,5 +6,5 @@ const overlay = document.querySelector('.overlay');
 burgerButton.addEventListener('click', () => {
     headerMenu.classList.toggle('active');
     linksContainer.classList.toggle('active');
-    overlay.classList.toggle('active');
+    overlay.classList.toggle('active')
 });

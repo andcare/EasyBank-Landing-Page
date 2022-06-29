@@ -3,30 +3,38 @@
 
 
 .header {
+    position: relative;
     height: 5rem;
     background-color: $white;
+    z-index: 999;
 
     .overlay {
         position: absolute;
+        display: none;
         opacity: 0;
-        top: 8.7%;
+        top: 100%;
         bottom: 0;
         left: 0;
         right: 0;
         height: 80vh;
         background: linear-gradient($darkBlue, transparent);
         transition: all 500ms ease-in-out;
+        z-index: -99999;
 
         &.active {
+            display: block;
             opacity: 1;
+            z-index: 1;
         }
     }
 
     #nav-container {
-        // position: relative;
+        position: relative;
         height: 100%;
+        z-index: 10000000;
 
         #logo-container {
+
             display: inherit;
 
             a {
@@ -56,17 +64,20 @@
                 height: 265px;
                 width: 325px;
                 // top: 11.5%;
-                top: -27%;
+                top: -100%;
                 left: 50%;
                 transform: translateX(-50%);
                 border-radius: 5px;
                 opacity: 0;
+                visibility: hidden;
                 background-color: $white;
                 transition: all 500ms ease-in-out;
 
                 &.active {
-                    top: 11.5%;
+                    top: 7rem;
+                    visibility: visible;
                     opacity: 1;
+                    z-index: 1;
                 }
 
 
@@ -124,7 +135,7 @@
         position: relative;
         height: 5rem;
         font-size: $smallFont;
-        font-weight: $lightWeight;
+        font-weight: $regularWeight;
         color: $grayishBlue;
         transition: all 300ms ease-in;
 
