@@ -25,9 +25,15 @@
             z-index: 100;
 
             @include breakpoint-up(mobile) {
-                margin-top: -130px;
-                height: 953px;
-                margin-right: -173px;
+                margin-top: -74px;
+                height: 528px;
+                margin-right: -163px;
+            }
+
+            @include breakpoint-up(laptop) {
+                margin-top: -127px;
+                height: 832px;
+                margin-right: -271px;
             }
         }        
 
@@ -37,8 +43,15 @@
             flex: 2;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: -59px -224px;
-            background-size: 150%;
+            background-position: -28px -44px;
+            background-size: 32rem;
+            height: 377px;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint-up(laptop) {
+            background-position: -24px -240px;
+            background-size: 73rem;
             height: 650px;
             margin-bottom: 0;
         }
@@ -55,8 +68,10 @@
         }
 
         @include breakpoint-up(mobile) {
+            height: auto;
+            margin-block: auto;
             order: 1;
-            flex: 2;
+            flex: 1.5;
             text-align: left;
         }
     }
