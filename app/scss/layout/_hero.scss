@@ -1,10 +1,14 @@
 @use '../variable/' as *;
+@use '../abstract/' as *;
 
 .hero {
     background-color: $veryLightGray;
 
+    @include breakpoint-up(mobile) {
+        display: flex;
+    }
+
     &__image {
-        position: relative;
         display: flex;
         justify-content: center;
         background: url(/images/bg-intro-mobile.svg);
@@ -15,10 +19,29 @@
         margin-bottom: 45px;
 
         img {
+            position: absolute;
             margin-top: -140px;
             height: 425px;
+            z-index: 100;
+
+            @include breakpoint-up(mobile) {
+                margin-top: -130px;
+                height: 953px;
+                margin-right: -173px;
+            }
+        }        
+
+        @include breakpoint-up(mobile) {
+            background: url(/images/bg-intro-desktop.svg);
+            order: 2;
+            flex: 2;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: -59px -224px;
+            background-size: 150%;
+            height: 650px;
+            margin-bottom: 0;
         }
-        
     }
 
     &__text {
@@ -29,6 +52,12 @@
         }
         p {
             margin-bottom: 2.1875rem;
+        }
+
+        @include breakpoint-up(mobile) {
+            order: 1;
+            flex: 2;
+            text-align: left;
         }
     }
 }

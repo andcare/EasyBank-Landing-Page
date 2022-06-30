@@ -17,6 +17,7 @@ body {
   font-family: "Public Sans", sans-serif !important;
   font-size: 1.125rem;
   line-height: 1.2;
+  overflow-x: hidden;
   text-rendering: optimizeSpeed;
 }
 
@@ -90,9 +91,9 @@ p {
 
 .header {
   position: relative;
-  height: 5rem;
+  height: 80px;
   background-color: hsl(0deg, 0%, 100%);
-  z-index: 999;
+  z-index: 100000000000;
 }
 .header .overlay {
   position: absolute;
@@ -114,6 +115,7 @@ p {
 }
 .header #nav-container {
   position: relative;
+  width: 100%;
   height: 100%;
   z-index: 10000000;
 }
@@ -224,8 +226,12 @@ p {
 .hero {
   background-color: hsl(0deg, 0%, 98%);
 }
+@media screen and (min-width: 30.0625em) {
+  .hero {
+    display: flex;
+  }
+}
 .hero__image {
-  position: relative;
   display: flex;
   justify-content: center;
   background: url(/images/bg-intro-mobile.svg);
@@ -236,8 +242,30 @@ p {
   margin-bottom: 45px;
 }
 .hero__image img {
+  position: absolute;
   margin-top: -140px;
   height: 425px;
+  z-index: 100;
+}
+@media screen and (min-width: 30.0625em) {
+  .hero__image img {
+    margin-top: -130px;
+    height: 953px;
+    margin-right: -173px;
+  }
+}
+@media screen and (min-width: 30.0625em) {
+  .hero__image {
+    background: url(/images/bg-intro-desktop.svg);
+    order: 2;
+    flex: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -59px -224px;
+    background-size: 150%;
+    height: 650px;
+    margin-bottom: 0;
+  }
 }
 .hero__text {
   text-align: center;
@@ -247,4 +275,11 @@ p {
 }
 .hero__text p {
   margin-bottom: 2.1875rem;
+}
+@media screen and (min-width: 30.0625em) {
+  .hero__text {
+    order: 1;
+    flex: 2;
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */

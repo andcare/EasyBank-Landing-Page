@@ -19,6 +19,7 @@ body {
     font-family: 'Public Sans', sans-serif !important;
     font-size: $bodyFont;
     line-height: 1.2;
+    overflow-x: hidden;
     text-rendering: optimizeSpeed;
 }
 
