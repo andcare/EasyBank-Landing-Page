@@ -10,7 +10,9 @@ $breakpoints-down: (
 
 $breakpoints-up: (
     'mobile': '30.0625em',
-    'laptop': '48.0625em'
+    'laptop': '48.0625em',
+    'desktop': '64.0625em',
+    'desktop-up': '90em'
 );
 
 @mixin breakpoint-down($screen) {

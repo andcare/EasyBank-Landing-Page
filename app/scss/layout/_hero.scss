@@ -8,6 +8,11 @@
         display: flex;
     }
 
+    @include breakpoint-up(desktop-up) {
+        max-width: 125rem;
+        margin: 0 auto;
+    }
+
     &__image {
         display: flex;
         justify-content: center;
@@ -16,24 +21,30 @@
         background-repeat: no-repeat;
         background-position: center;
         height: 260px;
-        margin-bottom: 45px;
+        margin-bottom: 2.8125rem;
 
         img {
             position: absolute;
-            margin-top: -140px;
+            margin-top: -8.75rem;
             height: 425px;
             z-index: 100;
 
             @include breakpoint-up(mobile) {
-                margin-top: -74px;
+                margin-top: -4.625rem;
                 height: 528px;
-                margin-right: -163px;
+                margin-right: -10.1875rem;
             }
 
             @include breakpoint-up(laptop) {
-                margin-top: -127px;
+                margin-top: -7.9375rem;
                 height: 832px;
-                margin-right: -271px;
+                margin-right: -16.9375rem;
+            }
+
+            @include breakpoint-up(desktop) {
+                margin-top: -8.125rem;
+                height: 953px;
+                margin-right: -10.8125rem;
             }
         }        
 
@@ -71,8 +82,14 @@
             height: auto;
             margin-block: auto;
             order: 1;
-            flex: 1.5;
+            flex: 1.2;
             text-align: left;
         }
+
+        @include breakpoint-up(desktop-up) {
+            padding-left: 11.6875rem;
+            flex: 1;
+        }
+
     }
 }
