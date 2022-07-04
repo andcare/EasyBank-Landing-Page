@@ -41,9 +41,22 @@ button {
 
 h1 {
     font-size: clamp($mobileHeaderFont, 5vw, $maxHeaderFont);
-    font-weight: $lightWeight;
+    font-weight: $regularWeight;
     color: $darkBlue;
     line-height: 1.15;
+}
+
+h2 {
+    // font-size: clamp($mobileSubHeaderFont, 5vw, $subheaderFont);
+    font-size: $subheaderFont;
+    font-weight: $regularWeight;
+    color: $darkBlue;
+    line-height: 1.15;
+}
+
+h3 {
+    font-weight: $regularWeight;
+    color: $darkBlue;
 }
 
 p {

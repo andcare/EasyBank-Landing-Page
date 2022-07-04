@@ -39,9 +39,21 @@ button {
 
 h1 {
   font-size: clamp(2.1875rem, 5vw, 2.5rem);
-  font-weight: 300;
+  font-weight: 400;
   color: hsl(233deg, 26%, 24%);
   line-height: 1.15;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: hsl(233deg, 26%, 24%);
+  line-height: 1.15;
+}
+
+h3 {
+  font-weight: 400;
+  color: hsl(233deg, 26%, 24%);
 }
 
 p {
@@ -271,7 +283,7 @@ p {
   .hero__image img {
     margin-top: -8.125rem;
     height: 953px;
-    margin-right: -10.8125rem;
+    margin-right: -17.812rem;
   }
 }
 @media screen and (min-width: 30.0625em) {
@@ -317,5 +329,60 @@ p {
   .hero__text {
     padding-left: 11.6875rem;
     flex: 1;
+  }
+}
+@media screen and (max-width: 30em) {
+  .hero__cta-container {
+    margin-bottom: 5rem;
+  }
+}
+
+.feature {
+  text-align: center;
+  padding-block: 65px;
+  background-color: hsl(220deg, 16%, 96%);
+}
+.feature__subheader {
+  margin-bottom: 60px;
+}
+.feature__item:not(:last-child) {
+  margin-bottom: 35px;
+}
+.feature__icon, .feature__title {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 30.0625em) {
+  .feature {
+    text-align: left;
+    padding-block: 110px;
+  }
+  .feature h2 {
+    margin-bottom: 20px;
+  }
+  .feature .feature__subheader {
+    max-width: 586px;
+  }
+  .feature .feature__item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+    grid-template-rows: auto;
+  }
+  .feature .feature__item {
+    padding-inline: 9px;
+  }
+  .feature .feature__icon {
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 30em) {
+  .feature h2 {
+    max-width: 324px;
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (min-width: 90em) {
+  .feature {
+    max-width: 125rem;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

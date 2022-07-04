@@ -44,7 +44,7 @@
             @include breakpoint-up(desktop) {
                 margin-top: -8.125rem;
                 height: 953px;
-                margin-right: -10.8125rem;
+                margin-right: -17.812rem;
             }
         }        
 
@@ -91,5 +91,11 @@
             flex: 1;
         }
 
+    }
+
+    &__cta-container {
+        @include breakpoint-down(mobile) {
+            margin-bottom: 5rem;
+        }
     }
 }

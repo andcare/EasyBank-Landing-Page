@@ -1,0 +1,68 @@
+@use '../variable/' as *;
+@use '../abstract/' as *;
+
+.feature {
+    text-align: center;
+    padding-block: 65px;
+    background-color: $lightGrayishBlue;
+
+    
+    &__subheader{
+        margin-bottom: 60px;
+    }
+    
+    &__item {
+        
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    
+    &__icon, &__title {
+        margin-bottom: 30px;
+    }
+
+
+    @include breakpoint-up(mobile) {
+        // display: flex;
+        // flex-direction: column;
+        text-align: left;
+        padding-block: 110px;
+    
+        h2 {
+            margin-bottom: 20px;
+        }
+    
+        .feature__subheader {
+            max-width: 586px;
+        }
+    
+        .feature__item-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+            grid-template-rows: auto;
+        }
+    
+        .feature__item {
+            padding-inline: 9px;
+
+        }
+
+        .feature__icon {
+            margin-bottom: 45px;
+        }
+    }
+    
+    @include breakpoint-down(mobile) {
+        h2 {
+            max-width: 324px;
+            margin: 0 auto 30px;
+            
+        }
+    }
+    
+    @include breakpoint-up(desktop-up) {
+        max-width: 125rem;
+        margin: 0 auto;
+    }
+}
