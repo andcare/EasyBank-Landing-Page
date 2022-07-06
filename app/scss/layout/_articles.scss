@@ -1,0 +1,74 @@
+@use '../variable/' as *;
+@use '../abstract/' as *;
+
+.article {
+
+    // text-align: center;
+    padding-block: 65px;
+    background-color: $veryLightGray;
+
+    h2 { 
+        margin-bottom: 60px;
+
+        @include breakpoint-down(mobile) {
+            text-align: center;
+            margin: 0 auto 35px;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+        grid-template-rows: auto;
+        row-gap: 20px;
+    }
+
+    &__card {
+        display: block;
+        background-color: $white;
+        width: 18.75rem;
+        border-radius: 5px;
+        padding-bottom: 40px;
+        margin: 0 auto 20px;
+
+        @include breakpoint-up(mobile) {
+            max-width: 255px;
+            padding-bottom: 28px;
+        }
+    }
+
+    &__author, &__subheader, &__description {
+        padding-inline: 25px;
+    }
+    
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 11.25rem;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 30px;
+
+    }
+
+    &__author {
+        display: block;
+        font-size: 9px;
+        color: $grayishBlue;
+        font-weight: $lightWeight;
+        margin-bottom: 15px;
+    }
+
+    &__subheader {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-size: 11px;
+    }
+
+    @include breakpoint-up(desktop-up) {
+        max-width: 125rem;
+        margin: 0 auto;
+    }
+}
